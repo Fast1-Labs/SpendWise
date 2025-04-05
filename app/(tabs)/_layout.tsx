@@ -1,7 +1,13 @@
+import { useAuth } from '@clerk/clerk-expo';
 import { FontAwesome } from '@expo/vector-icons';
-import { Tabs } from 'expo-router';
+import { Redirect, Tabs } from 'expo-router';
 
 export default function TabLayout() {
+  const { isSignedIn } = useAuth();
+
+  if (!isSignedIn) {
+    return <Redirect href="/(auth)/login" />;
+  }
   return (
     <Tabs
       screenOptions={{
@@ -36,7 +42,7 @@ export default function TabLayout() {
         name="index"
         options={{
           tabBarIcon: ({ focused }: any) => (
-            <FontAwesome name="home" size={30} color={focused ? '#E2E8F0' : '#A0AEC0'} />
+            <FontAwesome name="home" size={25} color={focused ? '#E2E8F0' : '#A0AEC0'} />
           ),
         }}
       />
@@ -44,7 +50,7 @@ export default function TabLayout() {
         name="scan"
         options={{
           tabBarIcon: ({ focused }: any) => (
-            <FontAwesome name="camera" size={30} color={focused ? '#E2E8F0' : '#A0AEC0'} />
+            <FontAwesome name="camera" size={25} color={focused ? '#E2E8F0' : '#A0AEC0'} />
           ),
         }}
       />
@@ -52,7 +58,7 @@ export default function TabLayout() {
         name="two"
         options={{
           tabBarIcon: ({ focused }: any) => (
-            <FontAwesome name="history" size={30} color={focused ? '#E2E8F0' : '#A0AEC0'} />
+            <FontAwesome name="history" size={25} color={focused ? '#E2E8F0' : '#A0AEC0'} />
           ),
         }}
       />
