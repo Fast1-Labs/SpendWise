@@ -6,13 +6,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#4F46E5', // Indigo-600
-        accent: '#22C55E', // Green-500
-        background: '#F9FAFB', // Gray-50
-        card: '#F3F4F6', // Gray-100
-        textPrimary: '#111827', // Gray-900
-        textSecondary: '#6B7280', // Gray-500
-        error: '#EF4444', // Red-500
+        background: '#1A1A1A', // Very dark gray, almost black (main background)
+        card: '#2D2D2D', // Slightly lighter gray for card background
+        cardMuted: '#444444', // Muted gray for card details or section
+        primary: '#5A67D8', // Soft, calming purple-blue (main action color)
+        accent: '#48BB78', // Soft green (for CTAs and success actions)
+        textPrimary: '#E2E8F0', // Light grayish-blue for main text
+        textSecondary: '#A0AEC0', // Subtle gray for less important text
+        error: '#E53E3E', // Soft red for errors, without being too bright
       },
     },
   },

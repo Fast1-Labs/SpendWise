@@ -5,25 +5,24 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: 'black',
         headerShown: false,
         tabBarShowLabel: false,
         tabBarStyle: {
-          backgroundColor: '#FFFFFF',
+          backgroundColor: '#2D2D2D',
           height: 60,
           marginVertical: 30,
           marginHorizontal: 20,
           position: 'absolute',
           borderRadius: 30,
           paddingBottom: 10,
-          shadowColor: 'black',
+          shadowColor: 'gainsboro',
           shadowOffset: {
             width: 0,
             height: 1,
           },
           shadowOpacity: 0.25,
           shadowRadius: 3.84,
-          elevation: 5,
+          elevation: 1,
         },
         tabBarIconStyle: {
           justifyContent: 'center',
@@ -36,24 +35,24 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          tabBarIcon: ({ color, focused }: any) => (
-            <FontAwesome name="home" size={30} color={focused ? 'black' : 'gray'} />
+          tabBarIcon: ({ focused }: any) => (
+            <FontAwesome name="home" size={30} color={focused ? '#E2E8F0' : '#A0AEC0'} />
           ),
         }}
       />
       <Tabs.Screen
         name="scan"
         options={{
-          tabBarIcon: ({ color, focused }: any) => (
-            <FontAwesome name="camera" size={30} color={focused ? 'black' : 'gray'} />
+          tabBarIcon: ({ focused }: any) => (
+            <FontAwesome name="camera" size={30} color={focused ? '#E2E8F0' : '#A0AEC0'} />
           ),
         }}
       />
       <Tabs.Screen
         name="two"
         options={{
-          tabBarIcon: ({ color, focused }: any) => (
-            <FontAwesome name="history" size={30} color={focused ? 'black' : 'gray'} />
+          tabBarIcon: ({ focused }: any) => (
+            <FontAwesome name="history" size={30} color={focused ? '#E2E8F0' : '#A0AEC0'} />
           ),
         }}
       />
